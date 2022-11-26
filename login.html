@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
+    
     <title >Document</title>
 </head>
 <body>
@@ -12,16 +13,20 @@
     <div class="container">
         <span id="log-in">Login</span>
 
-        <span id="username" >Usernmae</span>
-        <input type="text" placeholder="Type your username">
+        <span id="username" >Username</span>
+        <input type="text" id="usernameInput" placeholder="Type your username">
+        <span id="error-username"></span>
 
         <span id="password">Password</span>
-        <input type="password" placeholder="Type your password">
+        <input type="password" id="passwordInput" placeholder="Type your password">
+        <span id="error-pw"></span>
+        
 
         <span id="forgot">Forgot Password?</span>
 
-        <button class="button">LOGIN</button>
+        <button class="login-btn">LOGIN</button>
     </div>
 
-</body>
+</body >
+<script src="login.js"></script>
 </html>
