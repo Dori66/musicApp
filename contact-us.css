@@ -10,8 +10,8 @@ body{
     display: flex;
     justify-content:space-around;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
 }
  
   .container{
@@ -146,6 +146,9 @@ body{
      margin-left: 0;
    }
   }
+  #active{
+    background-color: white;
+  }
   
   .About-us {
     width: 100%;
@@ -179,4 +182,6 @@ body{
 h2{
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     cursor: pointer;
+    border-radius: 20px;
+    padding: 20px;
 }
