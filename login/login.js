@@ -1,8 +1,8 @@
 
 
 
- username = document.getElementById("username");
- password = document.getElementById("password");
+//  username = document.getElementById("username");
+//  password = document.getElementById("password");
 
  usernameInput = document.getElementById("usernameInput");
  passwordInput = document.getElementById("passwordInput");

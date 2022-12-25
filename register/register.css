@@ -18,7 +18,7 @@ body{
     display: flex;
     flex-direction: column;
 
-    height: 500px;
+    height: auto;
     border-radius: 10px;
     border: none;
     padding: 24px;
@@ -59,4 +59,8 @@ input{
     font-weight: 700;
     background-color: mediumpurple;
     color: white;
+}
+#error-username, #error-pw, #error-name,#error-age{
+    font-size: 15px;
+    color: red;
 }
