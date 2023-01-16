@@ -176,14 +176,14 @@ body{
   p {
     font-size: 20px;
   } 
-  a {
+  /* a {
     padding: 20px;
     text-align: center;
     text-decoration: none;
     margin: 5px 2px;
     color: white;
     border-radius: 8px;
- } 
+ }  */
 h2{
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     cursor: pointer;
@@ -226,4 +226,9 @@ footer{
     display: flex;
     flex-direction: column;
   }
+}
+
+#contact-link{
+  text-decoration: none; 
+  color: white;
 }
