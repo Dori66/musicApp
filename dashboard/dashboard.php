@@ -3,10 +3,8 @@
 require_once "../test/config.php";
 
 
-// Initialize the session
 session_start();
  
-// Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: ../test/login.php");
     exit;
@@ -83,7 +81,6 @@ $mysqli->close();
           <th>Action</th>
         <?php
         if ($result->num_rows > 0) {
-            // Output each user as a new table row
             while($row = $result->fetch_assoc()) {
                 echo "<tr>";
                 echo "<td>" . $row["id"] . "</td>";
@@ -110,7 +107,6 @@ $mysqli->close();
 
         <?php
         if ($result1->num_rows > 0) {
-            // Output each user as a new table row
             while($row1 = $result1->fetch_assoc()) {
                 echo "<tr>";
                 echo "<td>" . $row1["name"] . "</td>";

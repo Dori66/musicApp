@@ -4,10 +4,8 @@ require_once "../test/config.php";
 
 
 
-// Initialize the session
 session_start();
  
-// Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: ../test/login.php");
     exit;
@@ -18,13 +16,11 @@ $name = $pw = "";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
-  // Check if username is empty
   if(empty(trim($_POST["name"]))){
       $name = "";
   } else{
       $name = trim($_POST["name"]);
   }
-  // Check if password is empty
   if(empty(trim($_POST["ms"]))){
       $ms = "";
   } else{
@@ -34,20 +30,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
   if(!empty($name) && !empty($ms)){
         
-    // Prepare an insert statement
     $sql = "INSERT INTO messages (name, ms) VALUES (?, ?)";
      
     if($stmt = $mysqli->prepare($sql)){
-        // Bind variables to the prepared statement as parameters
         $stmt->bind_param("ss", $param_name, $param_ms);
         
-        // Set parameters
         $param_name = $name;
-        $param_ms = $ms; // Creates a password hash
+        $param_ms = $ms; 
         
-        // Attempt to execute the prepared statement
         if($stmt->execute()){
-            // Redirect to login page
             echo "TET";
             header("location: contact-us.php");
             unset($_POST['name']);
@@ -57,11 +48,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             echo "Oops! Something went wrong. Please try again later.";
         }
 
-        // Close statement
         $stmt->close();
     }
 }
-  // Close connection
   $mysqli->close();
 }
 
