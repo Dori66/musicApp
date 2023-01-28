@@ -55,6 +55,7 @@ h2{
     padding: 0px 150px 30px 10px;
     background-color: #202020;
     color: white;
+    border-radius: 50px;
  }
  p{
     width: 150%;
@@ -66,14 +67,13 @@ h2{
  }
  .btn{
     background-color: #009de0;
-    /* padding-left: 116px; */
-    /* margin-left: 20px; */
+
     width: 200px;
     height: 50px;
     color: white;
     font-size: 20px;
     font-weight: 800;
-
+    border-radius: 50px;
  }
  #sub{
     font-size: 40px;

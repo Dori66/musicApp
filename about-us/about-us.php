@@ -1,3 +1,14 @@
+<?php
+session_start();
+ 
+ // Check if the user is logged in, if not then redirect him to login page
+ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+     header("location: ../test/login.php");
+     exit;
+ }
+ 
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +21,14 @@
 </head>
 <body>
     <nav class="navigation">
-        <h2 ><a href="file:///C:/Users/doran/Desktop/Ushtrime%20UBT/Web-project/musicApp/home-page/home.html" id="contact-link">Home</a></h2>
+        <h2 ><a href="../home-page/home.php" id="contact-link">Home</a></h2>
         <h2 id="active"><a>Our Music </a></h2>
-        <h2 ><a href="file:///C:/Users/doran/Desktop/Ushtrime%20UBT/Web-project/musicApp/contact-us/contact-us.html" id="contact-link"> Contact Us</a></h2>
-        <h2 ><a href="file:///C:/Users/doran/Desktop/Ushtrime%20UBT/Web-project/musicApp/premium/premium.html" id="contact-link">Go Premium</a></h2>
+        <h2 ><a href="../contact-us/contact-us.php" id="contact-link"> Contact Us</a></h2>
+        <h2 ><a href="../premium/premium.php" id="contact-link">Go Premium</a></h2>
+        <h2 ><a href="../news/news.php" id="contact-link">News</a></h2>
+        <h2 style="background-color: grey;"><a href="../test/logout.php" style="text-decoration: none"> Log Out</a></h2>
+
+
     </nav>
     <div class="About-us">
         <div class="left-side">

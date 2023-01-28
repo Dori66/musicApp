@@ -31,7 +31,7 @@ function validation(){
    }if(password == ''){
     this.errorPassword.innerText = 'Password is required'
    }else {
-    alert('logged In Successfully')
+    // alert('logged In Successfully')
     this.errorPassword.innerText = ''
     this.errorUsername.innerText = '' 
     this.usernameInput.value = ''

@@ -39,7 +39,6 @@ function validation(){
     this.errorAge.innerText = 'Age is required'
    }    
    else {
-    alert('Register Successfully')
     this.errorPassword.innerText = ''
     this.errorUsername.innerText = '' 
     this.errorAge.innerText = ''

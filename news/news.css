@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.navigation{
+    width: 100%;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content:space-around;
+
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
+}
+h2{
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 20px;
+}
+#active{
+    background-color: white;
+}
+#contact-link{
+    text-decoration: none; 
+    color: white;
+ }
+
+ .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+ }
+
+ .item-news{
+    background-color: red;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 500px;
+    height: 300px;
+ }
