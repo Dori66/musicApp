@@ -1,7 +1,4 @@
-body{
-    margin: 0;
-    padding: 0;
-}
+
 .navigation{
     width: 100%;
     background-color: black;
@@ -13,32 +10,72 @@ body{
     /* padding-top: 10px;
     padding-bottom: 10px; */
 }
-h2{
-    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-    cursor: pointer;
-    border-radius: 20px;
-    padding: 20px;
-}
-#active{
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .music-news {
+    width: 80%;
+    margin: 0 auto;
     background-color: white;
-}
-#contact-link{
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 40px;
+  }
+  
+  .music-news h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 50px;
+    color: #333;
+  }
+  
+  .music-news-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .music-news-item img {
+    width: 200px;
+    height: 200px;
+    margin-right: 30px;
+    border-radius: 50%;
+  }
+  
+  .music-news-item h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .music-news-item p {
+    font-size: 18px;
+    color: gray;
+    margin-bottom: 10px;
+  }
+  
+  .music-news-item a {
+    color: blue;
+    text-decoration: none;
+  }
+  
+  .music-news-item a:hover {
+    color: #333;
+  }
+  #contact-link{
     text-decoration: none; 
     color: white;
  }
-
- .container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 20px;
- }
-
- .item-news{
-    background-color: red;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    width: 500px;
-    height: 300px;
- }
+ #active{
+  background-color: white;
+}
+h2{
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 20px;
+}

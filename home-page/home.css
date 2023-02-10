@@ -72,7 +72,9 @@ footer{
     background-color: black;
     padding: 20px;
     color: white;
-    height: 300px; 
+    position: absolute;
+    bottom: 0;
+    width: -webkit-fill-available;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -89,3 +91,12 @@ footer{
     text-decoration: none; 
     color: white;
  }
+
+.swiper{
+    width: 80%;
+    height: fit-content;
+}
+.swiper-slide{
+    width: 100%;
+
+}

@@ -1,11 +1,20 @@
 
 <?php 
+
+require_once "../test/config.php";
+
+
 session_start();
  
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: ../test/login.php");
     exit;
 }
+
+$sql = "SELECT * FROM news";
+$result = $mysqli->query($sql);
+
+
 ?>
 
 
@@ -28,27 +37,29 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <h2  id="active"><a>News</a></h2>
         <h2 style="background-color: grey;"><a href="../test/logout.php" style="text-decoration: none"> Log Out</a></h2>
 
-
     </nav>
-    
+    <div class="music-news">
+    <h1>Music News</h1>
 
-    <div class="container">
-        <div class="item-news">
-            s   
-        </div>
-        
-        <div class="item-news">
-            s
-        </div>
-        
-        <div class="item-news">
-           s 
-        </div>
-        
-        <div class="item-news">
-            s
-        </div>
-    </div>
+  <?php 
+
+    if($result-> num_rows > 0){
+      while($row = $result->fetch_assoc()){
+
+        echo "<div class='music-news-item'>";
+        echo "<img src='".$row['img']."''>";
+        echo "<div>";
+        echo "<h2>".$row['title']."</h2>";
+        echo "<p>".$row['description']."</p>";
+        echo "</div>";
+        echo "</div>";
+      }
+    }
+
+?>
+
+
+  
 
 
 </body>

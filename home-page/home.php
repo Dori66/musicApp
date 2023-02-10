@@ -27,6 +27,7 @@ $result = $mysqli->query($sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 </head>
 <body>
     <nav class="navigation">
@@ -40,10 +41,12 @@ $result = $mysqli->query($sql);
     <h1>Your Favorites Songs</h1>
 
     <div class="container">
+             <div class="swiper">
+                <div class="swiper-wrapper">
     <?php 
-
         if($result-> num_rows > 0){
             while($row = $result->fetch_assoc()){
+                echo "<div class='swiper-slide'>";
                 echo "<div class='left-side' style='height:auto;'>";
                 echo "<img src='playy.png' id='play-image'>";
                 echo "<h3 class='h3'>". $row["title"] . "</h3>";
@@ -51,11 +54,22 @@ $result = $mysqli->query($sql);
 
                 echo "<img src='venatt.png'>";
                 echo "</div>" ;
-
+                echo "</div>";
              }
 }   
-?>
+?>                    ...
+                </div>
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <div class="swiper-scrollbar"></div>
+            </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="home.js"></script>
 </body>
 <footer>
     <div class="footer-container-1">

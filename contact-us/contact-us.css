@@ -210,7 +210,9 @@ footer{
   background-color: black;
   padding: 20px;
   color: white;
-  height: 300px; 
+  position: absolute;
+  bottom: 0;
+  width: -webkit-fill-available;
   display: flex;
   align-items: center;
   justify-content: space-evenly;

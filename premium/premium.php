@@ -38,7 +38,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <p>You’re creating content or podcasts for your own use.</p>
 
                 <h2 id="title">$10/month*</h2>
-
+ 
                 <p>* When you pay $108 upfront for one year. Otherwise $15 / month</p>
                 <button class="btn">Subscribe</button>
 
