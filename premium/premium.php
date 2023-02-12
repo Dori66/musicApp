@@ -2,7 +2,7 @@
 session_start();
  
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: ../test/login.php");
+    header("location: ../auth/login.php");
     exit;
 }
 ?>
@@ -25,7 +25,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <h2 ><a href="../contact-us/contact-us.php" id="contact-link">Contact Us</a></h2>
         <h2  id="active"><a>Go Premium</a></h2>
         <h2 ><a href="../news/news.php" id="contact-link">News</a></h2>
-        <h2 style="background-color: grey;"><a href="../test/logout.php" style="text-decoration: none"> Log Out</a></h2>
+        <h2 style="background-color: grey;"><a href="../auth/logout.php" style="text-decoration: none"> Log Out</a></h2>
     </nav>
 
 

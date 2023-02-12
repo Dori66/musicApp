@@ -1,12 +1,12 @@
 <?php 
 
-require_once "../test/config.php";
+require_once "../auth/config.php";
 
 
 session_start();
  
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: ../test/login.php");
+    header("location: ../auth/login.php");
     exit;
 }
 
@@ -67,8 +67,8 @@ $mysqli->close();
     <nav>
       <ul>
         <li><a href="#users">Users</a></li>
-        <li><a href="../test/reset-password.php" class="btn btn-warning">Reset Your Password</a></li>
-        <li><a href="../test/logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a></li>
+        <li><a href="../auth/reset-password.php" class="btn btn-warning">Reset Your Password</a></li>
+        <li><a href="../auth/logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a></li>
       </ul>
     </nav>
     <main>

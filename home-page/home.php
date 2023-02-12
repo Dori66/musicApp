@@ -1,13 +1,13 @@
 <?php 
 
 
-require_once "../test/config.php";
+require_once "../auth/config.php";
 
 
 session_start();
  
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: ../test/login.php");
+    header("location: ../auth/login.php");
     exit;
 }
 
@@ -36,7 +36,7 @@ $result = $mysqli->query($sql);
         <h2 ><a href="../contact-us/contact-us.php" id="contact-link">Contact Us</a></h2>
         <h2 ><a href="../premium/premium.php" id="contact-link">Go Premium</a></h2>
         <h2 ><a href="../news/news.php" id="contact-link">News</a></h2>
-        <h2 style="background-color: grey;"><a href="../test/logout.php" style="text-decoration: none"> Log Out</a></h2>
+        <h2 style="background-color: grey;"><a href="../auth/logout.php" style="text-decoration: none"> Log Out</a></h2>
     </nav>
     <h1>Your Favorites Songs</h1>
 
